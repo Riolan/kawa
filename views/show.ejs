@@ -1,0 +1,33 @@
+<% include partials/header %>
+    <div height="5" style="padding-top: .5%; padding-bottom: .5%;">
+	        <div class="container" style="background-color: #ee7600; border-radius: 25px;"> 
+	            LATEST! <!-- < % an href with a title of what ever new blog is posetd %> -->
+	        </div>
+	    </div>
+
+<div class="container"> 
+<div class="jumbotron jumbotron-fluid">
+    
+        <div class="container">
+            <h1 class="display-1"> <%= kawa.name %> </h1>
+            <h2 class="text-muted display-3"> <%= kawa.namecatch %> </h2>
+        </div>
+        <div class="d-inline-block">
+                <a href="<%= kawa._id %>/edit" class="btn btn-lg btn-outline-warning container-fluid form-group">Edit</a>
+                <form action="/kawa/<%= kawa._id %>?_method=DELETE" method="POST"> 
+                    <button class="btn btn-lg btn-outline-danger container-fluid">Delete</button>
+                </form>
+         </div>
+    </div>
+</div>
+
+<div>
+    <div class="container" style="background: white;">
+            <div class="border">
+                <h4 class="lead" style="font-size: 1.5em;"><%= kawa.content %></h4>
+            </div>
+        </div>
+    </div>
+
+
+<% include partials/footer %>

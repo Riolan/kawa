@@ -1,0 +1,49 @@
+<% include partials/header.ejs %>
+     <link rel = "stylesheet" type = "text/css" href = "style.css" />
+	</head>
+	    <div height="5" style="padding-top: .5%; padding-bottom: .5%;">
+	        <div class="container" style="background-color: #ee7600; border-radius: 25px;"> 
+	            LATEST! <!-- < % an href with a title of what ever new blog is posetd %> -->
+	        </div>
+	    </div>
+	    <div class="container">
+            <div class="jumbotron">
+              <div class="container">
+                <h1 class="display-3">Loreum Ipsum! Lorem</h1>
+                <p class="lead">Maecenas a massa feugiat magna mattis fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et. </p>
+              </div>
+              <div class="container">
+                  <p class="lead">
+                        <a href="/new" class="btn btn-lg btn-outline-secondary" role="button">Upload</a>
+                    </p>
+                  </div>
+            </div>
+        </div>
+        <div class="container col-sm-12" style="background-color: black;" sizes="(max-width: 728px) 100vw, 700px"> 
+        
+        </div>
+            <div class="row" style="display:flex; flex-wrap: wrap; padding-top: 10px;">         
+                <% task.forEach(function(task){ %>
+                        <div class="col-12 col-sm-6 col-md-4" style="padding-top: 30px;">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2 style="text-align: center;"> <%= task.namecatch  %> </h2>
+                                    </div>
+                                    <div class="card-block">
+                                        <div class="card-text">
+                                            <h4 style="text-align: center;"> <%= task.name  %> </h4>
+                                        </div>
+                                        <a href="/kawa/<%= task._id %>" class="btn btn-outline-secondary btn-block">Go somewhere</a>
+                                        <div class="card">
+                                            <p> <h4 class="text-truncate" style="padding: 2px;"><%= task.content %><h4>
+                                            <img class="card-img-bottom displayIMG"  id="showtext" src="<%= task.img %>">
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                  </div>
+			
+			
+<% include partials/footer.ejs %>

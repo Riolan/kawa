@@ -1,0 +1,32 @@
+<% include partials/header %>
+<link rel="stylesheet" src="/public/style.css"/>
+
+<h1 class="header" style="margin: 25px auto;"> Post a x </h1>
+    <div class="container">
+       <!-- <div style="width:30%; margin: 25px auto;"> -->
+            <form action="/" method="POST" style="margin: 25px auto;">
+                <div class="container">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="NAME" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="namecatch" placeholder="Catch" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="img" placeholder="http://exampleimg.com/xxx.png" autocomplete="off" required>
+                </div>
+    <!--    </div> -->
+            </div>
+            <div class="form-group">
+                <label class="lead">Text content here...</label>
+                <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="20" required></textarea>
+            </div>
+            <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+        <a href="/" style="font-size: 60px; text-align:center;">◄</a> 
+
+        </form>
+    </div>
+
+<% include partials/footer %>
