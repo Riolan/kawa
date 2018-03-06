@@ -103,6 +103,6 @@ app.delete("/kawa/:id", function(req, res) {
 });
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(process.env.PORT, 8888, function(){
     console.log("Logged");
 });
